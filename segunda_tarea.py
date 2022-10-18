@@ -175,7 +175,7 @@ def producto(m1, m2):
         for row in range(len(m1)):
             for column in range(len(m2[0])):
                 for aux in range(len(m1[0])):
-                    m[row][column] = ComplexCalculator.add(m[row][column], ComplexCalculator.multi(m1[row][aux], m2[aux][column]))
+                    m[row][column] = calculador_complejos.add(m[row][column], ComplexCalculator.multi(m1[row][aux], m2[aux][column]))
         return m
     else:
         return "Length error"
