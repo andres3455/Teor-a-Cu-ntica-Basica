@@ -2,6 +2,12 @@ import primera_tarea as op
 import math
 import unittest
 
+def añadir(m1, m2):
+    m = []
+    if length(m1, m2):
+        for row in range(len(m1)):
+            m += [v_añadir(m1[row], m2[row])]
+        return m
 def producto_tensor(z,w):
 """Calcula el producto tensor entre dos matrices/vectores complejas y arroja
 otra matriz
@@ -48,6 +54,12 @@ def matriz_conjugada(o):
         for j in range (columna):
             conjugarla[i][j] = op.conjugado(o[i][j])
     return conjugarla
+def v_añadir(v1, v2):
+    if length(v1, v2):
+        m = []
+        for index in range(len(v1)):
+            m += [op.suma(v1[index], v2[index])]
+        return m
 def vector_escalar(sc, v1):
     m = []
     for index in range(len(v1)):
