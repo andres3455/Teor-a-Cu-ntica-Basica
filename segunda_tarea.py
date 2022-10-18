@@ -48,6 +48,11 @@ def matriz_conjugada(o):
         for j in range (columna):
             conjugarla[i][j] = op.conjugado(o[i][j])
     return conjugarla
+def vector_escalar(sc, v1):
+    m = []
+    for index in range(len(v1)):
+        m += [ComplexCalculator.multi(sc, v1[index])]
+    return m
     
 def matriz_adjunta(o):
 """ Toma una matriz y devuelve su adjunta
