@@ -20,8 +20,8 @@ def longitud(Vector1, Vector2):
         return False
 #1
 def probabilidad(ket, po):
-    n = espacios.norma_de_un_vector(ket)
-    p2 = Calculator.mod(ket[p]) ** 2
+    n = lol.norma_de_un_vector(ket)
+    p2 = op.modulo(ket[p]) ** 2
     result = round((p2/n ** 2) * 100, 2)
     return result
 
@@ -30,15 +30,15 @@ def amplitud(Ket1, Ket2):
     for index in range(len(Ket2)):
         auxiliar = [Ket2[index]]
         v1 += [auxiliar]
-    K2 = Spaces.matriz_conjugada(v1)
+    K2 = lol.matriz_conjugada(v1)
     v2 = []
     for index in range(len(ket2)):
         v2 += ket2[index]
-    norma_1 = espacios.norma_de_un_vector(Ket1)
-    norma_2 = espacios.norma_de_un_vector(ket2)
+    norma_1 = lol.norma_de_un_vector(Ket1)
+    norma_2 = lol.norma_de_un_vector(ket2)
     norma = norma_1 * norma_2
-    probabilidad = [espacios.longitud_vector(v2, Ket1)]
-    check = espacios.vector_scalar((1/norm, 0), probabilidad)[0]
+    probabilidad = [lol.longitud_vector(v2, Ket1)]
+    check = lol.vector_scalar((1/norm, 0), probabilidad)[0]
     point = (round(check[0], 2), round(check[1], 2))
     return point
 # 2
@@ -48,7 +48,7 @@ def matriz_hermitiana(x):
     """
     longitud = len(x)
     k = [[(0,0) for i in range (longitud)] for i in range (longitud)]
-    adj = matriz_adjunta(x)
+    adj = op.matriz_adjunta(x)
     h = adj == x
     return x
 def media(observable, Ket):
