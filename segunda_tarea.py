@@ -35,8 +35,8 @@ def longitud_vector(v1, v2):
     point = (0, 0)
     if length(v1, v2):
         for index in range(len(v1)):
-            aux = op.multi(v1[index], v2[index])
-            point = op.add(point, aux)
+            aux = op.multiplicacion(v1[index], v2[index])
+            point = op.suma(point, aux)
         return point
     else:
         return "Longitud incorrecta"
