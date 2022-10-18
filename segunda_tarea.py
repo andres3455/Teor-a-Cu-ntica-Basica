@@ -29,11 +29,11 @@ def longitud_vector(v1, v2):
     point = (0, 0)
     if length(v1, v2):
         for index in range(len(v1)):
-            aux = ComplexCalculator.multi(v1[index], v2[index])
-            point = ComplexCalculator.add(point, aux)
+            aux = op.multi(v1[index], v2[index])
+            point = op.add(point, aux)
         return point
     else:
-        return "Length error"
+        return "Longitud incorrecta"
 def matriz_conjugada(o):
 """ Toma una matriz y retorna su respectiva matriz conjugada
     (o) --> (o**--)
@@ -51,7 +51,7 @@ def matriz_conjugada(o):
 def vector_escalar(sc, v1):
     m = []
     for index in range(len(v1)):
-        m += [ComplexCalculator.multi(sc, v1[index])]
+        m += [op.multiplicacion(sc, v1[index])]
     return m
     
 def matriz_adjunta(o):
@@ -175,7 +175,7 @@ def producto(m1, m2):
         for row in range(len(m1)):
             for column in range(len(m2[0])):
                 for aux in range(len(m1[0])):
-                    m[row][column] = calculador_complejos.add(m[row][column], ComplexCalculator.multi(m1[row][aux], m2[aux][column]))
+                    m[row][column] = op.suma(m[row][column], op.multiplicacion(m1[row][aux], m2[aux][column]))
         return m
     else:
-        return "Length error"
+        return "Longitud incorrecta"
