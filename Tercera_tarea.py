@@ -76,7 +76,7 @@ def varianza(observable, Ket):
     for i in range(len(observable)):
         for j in range(len(observable[i])):
             if i == j:
-                m[i][j] = Calculator.multi((-1, 0), media)
+                m[i][j] = op.multiplicacion((-1, 0), media)
     m = lol.añadir(m, observable)
     square = lol.producto(m, m)
     ac = lol.matriz(square, K_aux)
