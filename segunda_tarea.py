@@ -25,6 +25,15 @@ def matriz_transpuesta (o):
         for j in range (columna):
             transponerla[i][j] = o[j][i]
     return transponerla
+def longitud_vector(v1, v2):
+    point = (0, 0)
+    if length(v1, v2):
+        for index in range(len(v1)):
+            aux = ComplexCalculator.multi(v1[index], v2[index])
+            point = ComplexCalculator.add(point, aux)
+        return point
+    else:
+        return "Length error"
 def matriz_conjugada(o):
 """ Toma una matriz y retorna su respectiva matriz conjugada
     (o) --> (o**--)
