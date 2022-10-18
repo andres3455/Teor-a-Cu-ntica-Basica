@@ -1,6 +1,6 @@
 import numpy as np
 import primera_tarea
-import segunda_tarea
+import segunda_tarea as lol
 
 def matriz(m1, v1):
     return m_mul(m1, v1)
