@@ -99,16 +99,16 @@ def probabilidades_vectores(i, observable, po):
     return amplitud(i, vectores[po])
 
 #4
-def unitaria(m1):
-    if length(m1, m1[0]):
-        mI = diagonal((len(m1)))
-        m2 = lol.matriz_adjunta(m1)
-        operacion = op.producto(m1, m2)
+def unitaria(matriz_uno):
+    if length(matriz_uno, matriz_uno[0]):
+        primera_m = diagonal((len(matriz_uno)))
+        segunda_m = lol.matriz_adjunta(matriz_uno)
+        operacion = op.producto(matriz_uno, segunda_m)
         flag = True
-        aux = lol.f_aux(operacion)
-        for i in range(len(m1)):
-            for j in range(len(m1)):
-                if product[i][j] != mI[i][j]:
+        auxiliar = lol.conect(operacion)
+        for i in range(len(matriz_uno)):
+            for j in range(len(matriz_uno)):
+                if operacion[i][j] != primera_m[i][j]:
                     flag = False
         if flag:
             return True
