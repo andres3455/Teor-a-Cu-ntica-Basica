@@ -2,7 +2,7 @@ import primera_tarea as op
 import math
 import unittest
 
-def añadir(m1, m2):
+def anadir(m1, m2):
     m = []
     if length(m1, m2):
         for row in range(len(m1)):
