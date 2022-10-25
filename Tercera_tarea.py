@@ -48,7 +48,7 @@ def matriz_hermitiana(x):
     """
     longitud = len(x)
     k = [[(0,0) for i in range (longitud)] for i in range (longitud)]
-    adj = op.matriz_adjunta(x)
+    adj = lol.matriz_adjunta(x)
     h = adj == x
     return x
 def media(observable, Ket):
@@ -102,8 +102,8 @@ def probabilidades_vectores(i, observable, po):
 def unitaria(m1):
     if length(m1, m1[0]):
         mI = diagonal((len(m1)))
-        m2 = op.matriz_adjunta(m1)
-        product = Spaces.m_mul(m1, m2)
+        m2 = lol.matriz_adjunta(m1)
+        product = op.m_mul(m1, m2)
         flag = True
         aux = Spaces.f_aux(product)
         for i in range(len(m1)):
