@@ -81,3 +81,20 @@ def varianza(observable, Ket):
     square = lol.producto(m, m)
     ac = lol.matriz(square, K_aux)
     return lol.longitud_vector(ac, B)
+#3
+def val_vectores(observable):
+    val, vectores = np.linalg.eig(observable)
+    l_val = []
+    l_vectores = []
+    for index in range(len(val)):
+        l_val += [(val[index].real, val[index].imag)]
+    for index in range(len(vectores)):
+        V = []
+        for index_2 in range(len(vectores[0])):
+            V += [(vectores[index][index_2].real, vectores[index][index_2].imag)]
+        l_vectores += [V]
+    return l_valores, l_vectores
+
+def probabilidades_vectores(i, observable, po):
+    vectores = va_vectores(observable)[1]
+    return amplitud(i, vectores[po])
