@@ -1,5 +1,8 @@
 # Teor-a-Cu-ntica-Basica
+Hola, en esta biblioteca encontrarás los desafíos de programación del capítulo 4 de Computación cuántica para informáticos.
+Numpy, una biblioteca de Python para manipular y manipular datos en listas ordenadas, se utilizó para desarrollar esta biblioteca. conceptos como este
+El programa muestra vectores ket, observables, varianzas, medias y matrices unitarias.
 
 
-Se llevaron a cabo los retos de programacion, asignados en la clase, 
-tanto tarea 1 como tarea 2, son librerias ya realizadas y utilizadas para el correcto funcionamiento de las actividades
+Las tareas 1 y 2 son bibliotecas creadas y utilizadas para que la actividad funcione correctamente.
+Consulte el Capítulo 4 de Quantum Computing for Computer Scientists para obtener una explicación de cada programa.
