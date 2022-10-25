@@ -103,9 +103,9 @@ def unitaria(m1):
     if length(m1, m1[0]):
         mI = diagonal((len(m1)))
         m2 = lol.matriz_adjunta(m1)
-        product = op.m_mul(m1, m2)
+        operacion = op.producto(m1, m2)
         flag = True
-        aux = Spaces.f_aux(product)
+        aux = lol.f_aux(operacion)
         for i in range(len(m1)):
             for j in range(len(m1)):
                 if product[i][j] != mI[i][j]:
