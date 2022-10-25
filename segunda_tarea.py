@@ -54,7 +54,7 @@ def matriz_conjugada(o):
         for j in range (columna):
             conjugarla[i][j] = op.conjugado(o[i][j])
     return conjugarla
-def v_añadir(v1, v2):
+def v_anadir(v1, v2):
     if length(v1, v2):
         m = []
         for index in range(len(v1)):
