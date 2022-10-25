@@ -172,6 +172,8 @@ def producto_escalar_vector(w):
     escalar = len(w)
     s = [(0,0)] * num
     for i in range (num):
+def accion(m, v):
+    return producto(m, v)
         s[i] = op.producto((-1,0),v[i])
     return (s)
 def inversa_vector(d):
