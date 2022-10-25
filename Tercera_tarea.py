@@ -1,5 +1,5 @@
 import numpy as np
-import primera_tarea
+import primera_tarea as op
 import segunda_tarea as lol
 
 def matriz(m1, v1):
@@ -120,7 +120,7 @@ def unitaria(matriz_uno):
 def dynamique(u, v, k):
     if unitaria(mu):
         for index in range(k):
-            v = lol.m_action(u,v)
+            v = lol.matriz(u,v)
         return v
     else:
         return "Matriz no valida"
