@@ -79,7 +79,7 @@ def varianza(observable, Ket):
                 m[i][j] = op.multiplicacion((-1, 0), media)
     m = lol.añadir(m, observable)
     square = lol.producto(m, m)
-    ac = lol.matriz(square, K_aux)
+    ac = lol.accion(square, K_aux)
     return lol.longitud_vector(ac, B)
 #3
 def val_vectores(observable):
@@ -94,7 +94,7 @@ def val_vectores(observable):
             V += [(vectores[index][index_2].real, vectores[index][index_2].imag)]
         l_vectores += [V]
     return l_valores, l_vectores
-def probabilidades_vectores(i, observable, po):
+def prob_vectores(i, observable, po):
     vectores = va_vectores(observable)[1]
     return amplitud(i, vectores[po])
 
@@ -125,3 +125,37 @@ def dynamique(u, v, k):
     else:
         return "Matriz no valida"
 print(dynamique), (0, 0)], [(0, 0), (0, 1)]], [(1, 0), (0, 0)], 1))
+# Ejercicio 4.3.1
+"""
+Vector inicial :
+    v = [[(1, 0)], [(0, 0)]]
+    obs_x = [[(0, 0), (1, 0)], [(1, 0), (0, 0)]]
+    vector = lol.m_accion(obs_x, v)
+    val_x, vec_x = val_vectores(obs_x)
+    print("El resultado luego de la observacion sera: ", vector)
+    print("Los valores propios del observable son: ", val_x, " sus vectores poropios sera: ", vec_x, " por lo tanto el sistema tiende a colapsar en un vector propio")
+"""
+# Ejercicio 4.3.2
+"""
+    p = prob_vectores(vector, obs_x, 1)
+    """
+# Excercise 4.4.1
+"""
+    vector_14 = [[(0, 0), (1, 0)], [(1, 0), (0, 0)]]
+    vecotor_24 = [[((2**(1/2))/2, 0), ((2**(1/2))/2, 0)], [((2**(1/2))/2, 0), (-(2**(1/2))/2, 0)]]
+    if unitaria(vector_14) and unitaria(vector_24):
+        print(unitaria(lol.producto(vector_14,vector_24)))
+        """
+# Excercise 4.4.2
+"""
+    print(dynamique([[(0, 0), (1/(2**(1/2)), 0), (1/(2**(1/2)), 0), (0, 0)],
+                        [(1/(2**(1/2)), 0), (0, 0), (0, 0), (-1/(2**(1/2)), 0)],
+                        [(1 / (2 ** (1 / 2)), 0), (0, 0), (0, 0), (1 / (2 ** (1 / 2)), 0)],
+                        [(0, 0), (-1/(2**(1/2)), 0), (1/(2**(1/2)), 0), (0, 0)]],
+                        [(1,0), (0,0), (0,0), (0,0)], 3))
+    print(dynamique([[(0, 0), (1 / (2 ** (1 / 2)), 0), (1 / (2 ** (1 / 2)), 0), (0, 0)],
+                   [(0, 1 / (2 ** (1 / 2))), (0, 0), (0, 0), (1 / (2 ** (1 / 2)), 0)],
+                   [(1 / (2 ** (1 / 2)), 0), (0, 0), (0, 0), (0, 1 / (2 ** (1 / 2)))],
+                   [(0, 0), (1 / (2 ** (1 / 2)), 0), (-1 / (2 ** (1 / 2)), 0), (0, 0)]],
+                  [(1, 0), (0, 0), (0, 0), (0, 0)], 3))
+    """
