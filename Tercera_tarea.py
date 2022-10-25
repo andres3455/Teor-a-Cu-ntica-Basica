@@ -117,12 +117,11 @@ def unitaria(matriz_uno):
     else:
         return False
 
-def dinamica(mat_u, v1, t):
-    if m_unitaria(mat_u):
-        for index in range(t):
-            v1 = Spaces.m_action(mat_u, v1)
-        return v1
+def dynamique(u, v, k):
+    if unitaria(mu):
+        for index in range(k):
+            v = lol.m_action(u,v)
+        return v
     else:
         return "Matriz no valida"
-
-print(dinamica([[(0, 1), (0, 0)], [(0, 0), (0, 1)]], [(1, 0), (0, 0)], 1))
+print(dynamique), (0, 0)], [(0, 0), (0, 1)]], [(1, 0), (0, 0)], 1))
