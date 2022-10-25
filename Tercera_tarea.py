@@ -94,7 +94,35 @@ def val_vectores(observable):
             V += [(vectores[index][index_2].real, vectores[index][index_2].imag)]
         l_vectores += [V]
     return l_valores, l_vectores
-
 def probabilidades_vectores(i, observable, po):
     vectores = va_vectores(observable)[1]
     return amplitud(i, vectores[po])
+
+#4
+def unitaria(m1):
+    if length(m1, m1[0]):
+        mI = diagonal((len(m1)))
+        m2 = op.matriz_adjunta(m1)
+        product = Spaces.m_mul(m1, m2)
+        flag = True
+        aux = Spaces.f_aux(product)
+        for i in range(len(m1)):
+            for j in range(len(m1)):
+                if product[i][j] != mI[i][j]:
+                    flag = False
+        if flag:
+            return True
+        else:
+            return False
+    else:
+        return False
+
+def dinamica(mat_u, v1, t):
+    if m_unitaria(mat_u):
+        for index in range(t):
+            v1 = Spaces.m_action(mat_u, v1)
+        return v1
+    else:
+        return "Matriz no valida"
+
+print(dinamica([[(0, 1), (0, 0)], [(0, 0), (0, 1)]], [(1, 0), (0, 0)], 1))
