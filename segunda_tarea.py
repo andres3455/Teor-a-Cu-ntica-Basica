@@ -191,3 +191,12 @@ def producto(m1, m2):
         return m
     else:
         return "Longitud incorrecta"
+    
+def conect(operacion):
+    auxiliar = 0
+    if operacon[0][0][0] != 1 and operacion[0][1][0] == 0:
+            if operacion[0][0][0] > 0:
+                auxiliar = (1/(operacion[0][0][0]))
+            elif operacion[0][0][0] < 0:
+                auxiliar = (-1/(operacion[0][0][0]))
+    return auxiliar
